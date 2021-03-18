@@ -16,8 +16,10 @@ public class Empleado extends Persona implements Serializable{
     private String departamento;
     private float sueldo;
     private int horasExtra;
-
+    private Direccion domicilio; 
+    
     public Empleado() {
+        domicilio = new Direccion();
     }
 
     public Empleado(int numeroEmpleado, String departamento, float sueldo, int horasExtra) {
@@ -72,6 +74,14 @@ public class Empleado extends Persona implements Serializable{
     @Override
     public String toString() {
         return "Empleado{" + "numeroEmpleado=" + numeroEmpleado + ", departamento=" + departamento + ", sueldo=" + sueldo + ", horasExtra=" + horasExtra + '}';
+    }
+
+    public Direccion getDomicilio() {
+        return domicilio;
+    }
+
+    public void setDomicilio(Direccion domicilio) {
+        this.domicilio = domicilio;
     }
     
     
